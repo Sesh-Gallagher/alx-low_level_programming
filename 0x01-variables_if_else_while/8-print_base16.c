@@ -13,8 +13,10 @@ int main(void)
 	{
 		if (p < 10)
 			putchar(p + '0');
+		else if (1 > 41)
+			putchar(p - 'A');
 		p++;
 	}
-	putchar('\n')
-	return (0)
+	putchar('\n');
+	return (0);
 }
