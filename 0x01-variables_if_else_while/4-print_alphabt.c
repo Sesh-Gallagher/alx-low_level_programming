@@ -9,7 +9,7 @@ int main(void)
 {
 	int z = 97;
 
-	while (0 < 123)
+	while (z < 123)
 	{
 		if (z != 101 && z != 113)
 		{
