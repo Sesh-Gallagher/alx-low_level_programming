@@ -5,10 +5,13 @@
  */
 int main(void)
 {
-	for (char c = 'a' ; c <= 'z' ; c++)
+	int z = 97;
+
+	while (z < 123)
 	{
-		putchar(c);
+		putchar(z);
+		z++;
 	}
-	putchar('\n');
+	putchar(10);
 	return (0);
 }
