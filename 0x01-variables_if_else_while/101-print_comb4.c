@@ -10,25 +10,26 @@ int main(void)
 {
 	int h, i, j;
 
-	h = 48;
-	i = 48;
-	j = 48;
+	h = '0';
 
-	while (h < 58)
+	while (h <= '7')
 	{
 		i = h + 1;
-		while (j < 58)
+
+		while (i <= '8')
 		{
 			j = i + 1;
-			while (j < 58)
+
+			while (j <= '9')
 			{
 				putchar(h);
 				putchar(i);
 				putchar(j);
-				if (h < 55 || i < 56 || j < 57)
+
+				if (!(h == '7' && i == '8' && j == '9'))
 				{
-					putchar(44);
-					putchar(32);
+					putchar(',');
+					putchar(' ');
 				}
 				j++;
 			}
