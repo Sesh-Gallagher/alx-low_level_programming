@@ -1,40 +1,36 @@
 #include <stdio.h>
 
 /**
+ * main - program to print combo of two digits
  *
- * main - program to print combo of two digits 
- *
- * Return: 0 on Success
+ * Return: 0 on (Success)
  */
 int main(void)
-{       
-        int a, b;
-        
-        a = '0';
-        b = '1';
-        
-        while (a <= '9')
-        {       
-                while (b <= '9')
-                {
-                        if (!(a > b) || a == b)
-                        {
-                                putchar(a);
-                                putchar(b);
-                                if (a == '8' && b == '9')
-                                {
-                               		 putchar(10);
-                                }
-                                else
-                                {
-                                        putchar(',');
-                                        putchar(' ');
-                                }
-                        }
+{
+	int a, b;
+
+	a = 0;
+	b = 1;
+
+	while (a <= 8)
+	{
+		while (b <= 9)
+		{
+			putchar(a + '0');
+			putchar(b + '0');
+			if (a != 8 || b != 9)
+			{
+				putchar(',');
+				putchar(' ');
+			}
 			b++;
-                }
-		b = '0';
+		}
+		b = a + 2;
 		a++;
+
 	}
+
+	putchar(10);
+
 	return (0);
 }
