@@ -1,1 +1,1 @@
-Working with the Shell and basics of c 
+This Repo contains files and scripts on how to program using c and c++ 
