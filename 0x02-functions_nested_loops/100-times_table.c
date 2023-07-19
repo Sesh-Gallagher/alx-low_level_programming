@@ -3,10 +3,11 @@
 
 /**
  * print_times_table - Prints the times table for a given value of n.
- * The function prints the multiplication table from 0 to n.
+ *
+ * Description: This function prints the multiplication table from 0 to n
+ * using nested loops.
  *
  * @n: The upper bound for the times table (0 to 15).
- *
  */
 
 void print_times_table(int n)
@@ -38,10 +39,10 @@ void print_times_table(int n)
 
 
 /**
- * main - program that gives you the multiples of n
- * print_times_table - Prints the times table for a given value of n.
+ * main - Entry point of program.
  *
- * Description: The function calls the print_times_table with a size of n
+ * Description: The function is the entry point of the program.
+ * it calls the print_times_table with a size of n
  *
  * Return: 0 (success)
  */
