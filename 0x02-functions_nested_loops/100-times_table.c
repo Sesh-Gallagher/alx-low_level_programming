@@ -48,9 +48,10 @@ int a, b;
 
 int main(void)
 {
-		int size = 5;
 
-		print_times_table(size);
+	int size = 5;
 
-		return (0);
-	}
+	print_times_table(size);
+
+	return (0);
+}
