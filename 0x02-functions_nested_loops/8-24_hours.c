@@ -20,8 +20,8 @@ void jack_bauer(void)
 			_putchar((b / 10) + '0');
 			_putchar((b % 10) + '0');
 			_putchar(':');
-			_putchar((b / 10) + '0');
-			_putchar((b % 10) + '0');
+			_putchar((c / 10) + '0');
+			_putchar((c % 10) + '0');
 			_putchar('\n');
 			c++;
 		}
