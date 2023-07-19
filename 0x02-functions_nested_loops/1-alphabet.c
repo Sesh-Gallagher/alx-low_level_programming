@@ -2,7 +2,7 @@
 #include <unistd.h>
 
 /**
- * main - program that prints alphanbets in lowercase
+ * print_alphabet - program that prints alphabets in lowercase
  *
  * Return: 0 on (success)
  */
