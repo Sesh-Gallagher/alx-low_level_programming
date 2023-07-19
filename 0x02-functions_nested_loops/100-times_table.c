@@ -2,12 +2,11 @@
 #include <stdio.h>
 
 /**
- * main -  function that prints the n times table, starting with 0.
- * If n is < than 15 or > than 0 the function should not print anything
+ * print_times_table - Prints the times table for a given value of n.
+ * The function prints the multiplication table from 0 to n.
  *
- * print_times_table - program that prints the n times table, starting with 0.
+ * @n: The upper bound for the times table (0 to 15).
  *
- * Return: Always 0 (success)
  */
 
 void print_times_table(int n)
@@ -19,7 +18,7 @@ void print_times_table(int n)
 		return;
 	}
 
-	int a, b;
+int a, b;
 
 	for (a = 0; a <= n; a++)
 	{
@@ -37,12 +36,21 @@ void print_times_table(int n)
 	}
 }
 
-	int main(void)
-	{
+
+/**
+ * main - program that gives you the multiples of n
+ * print_times_table - Prints the times table for a given value of n.
+ *
+ * Description: The function calls the print_times_table with a size of n
+ *
+ * Return: 0 (success)
+ */
+
+int main(void)
+{
 		int size = 5;
 
 		print_times_table(size);
 
 		return (0);
 	}
-
