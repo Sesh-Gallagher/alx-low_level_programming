@@ -1,1 +1,1 @@
-to add details on what this repo has
+Working with the Shell and basics of c 
