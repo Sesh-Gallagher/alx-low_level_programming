@@ -2,57 +2,55 @@
 #include <stdio.h>
 
 /**
- * print_times_table - Prints the times table for a given value of n.
+ * print_times_table - Prints the times table for a given value of n
  *
- * Description: This function prints the multiplication table from 0 to n
- * using nested loops.
- *
- * @n: The upper bound for the times table (0 to 15).
+ * @n: number of the times table.
  */
 
 void print_times_table(int n)
 {
+	int a, b, c;
 
-	if (n < 0 || n > 15)
+	if (n >= 0 && n <= 15)
 	{
-		printf(" \n");
-		return;
-	}
-
-	int a, b;
-
-	for (a = 0; a <= n; a++)
-	{
-		for (b = 0; b <= n; b++)
+		for (a = 0; a <= n; a++)
 		{
-			int result = a * b;
+			for (b = 0; b <= n; b++)
+			{
+				c = a * b;
 
-			printf("%d", result);
+				if (b == 0)
+					_putchar(0);
+				else if (c < 10)
+				{
+					_putchar(',');
+					_putchar(' ');
+					_putchar(' ');
+					_putchar(' ');
+					_putchar(c % 10 + '0');
+				}
+				else if (c >= 10 && c < 100)
 
-			if (b != n)
-				printf(",\t");
+				{
+
+				_putchar(',');
+				_putchar(' ');
+				_putchar(' ');
+				_putchar((c / 10) % 10  + '0');
+				_putchar(c % 10 + '0');
+
+				}
+				else if (c > 99 && c < 1000)
+
+				{
+				_putchar(',');
+				_putchar(' ');
+				_putchar((c / 100) + '0');
+				_putchar((c / 10) % 10 + '0');
+				_putchar(c % 10 + '0');
+				}
+			}
+			_putchar('\n');
 		}
-
-		printf("\n");
 	}
-}
-
-
-/**
- * main - Entry point of program.
- *
- * Description: The function is the entry point of the program.
- * it calls the print_times_table with a size of n
- *
- * Return: 0 (success)
- */
-
-int main(void)
-{
-
-	int size = 5;
-
-	print_times_table(size);
-
-	return (0);
 }
