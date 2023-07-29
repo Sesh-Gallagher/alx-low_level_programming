@@ -2,33 +2,26 @@
 
 /**
  *leet - function that encodes a string into 1337
- *@s: The String that encodes
+ *@n: The String that encodes
  *
- *Return: The encoded string
+ *Return: n value
  */
 
-char *leet(char *s)
+char *leet(char *n)
 {
-	int a = 0, b = 0, c = 5;
-	char r[5] = {'A', 'E', 'O', 'T', 'C'};
-	char n[5] = {'4', '3', '0', '7', '1'};
+	int a, b;
+	char s1[] = "aAeEoOtTlL";
+	char s2[] = "4433007711";
 
-	while (s[a])
+	for (a = 0; n[a] != '\0'; a++)
 	{
-		b = 0;
-
-		while (b < 1)
+		for (b = 0; b < 10; b++)
 		{
-			if (s[a] == r[b] || s[a] - 32 == r[b])
+			if (n[a] == s1[b])
 			{
-				s[a] = n[b];
+				n[a] = s2[b];
 			}
-
-			b++;
-
 		}
-
-		a++;
 	}
-	return (s);
+	return (n);
 }
