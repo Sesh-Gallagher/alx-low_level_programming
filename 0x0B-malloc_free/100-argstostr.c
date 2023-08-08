@@ -49,7 +49,7 @@ char *argstostr(int ac, char **av)
 		e++;
 		b++;
 	}
-       	e++;
+	e++;
 	s[e] = '\0';
 	return (s);
 }
