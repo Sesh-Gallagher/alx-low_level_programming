@@ -6,7 +6,7 @@
  * @name: String of array to be printed as name
  * @f: The pointer to function to bo used
  *
- * Return: void
+ * Return: nothing
  *
  */
 
