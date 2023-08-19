@@ -3,27 +3,48 @@
 #include <stdlib.h>
 
 /**
-  * main - Prints multiplication of two args numbers
-  * @argc: number of argument
-  * @argv: array of argument
+  * _atoi - Prints multiplication of two args numbers
+  * @s: String to be converted
   *
-  * Return: 0
+  * Return: int thats been converted from string
   */
-int main(int argc, char *argv[])
+
+int _atoi(char *s)
 {
-	int x1 = 0, x2 = 0;
+	int a, b, n, len, f, digit;
 
-	if (argc == 3)
+	a = 0;
+	b = 0;
+	n = 0;
+	len = 0;
+	f = 0;
+	digit = 0;
+
+	while (s[len] != '\0')
+		len++;
+
+	while (a < len && f == 0)
 	{
-		x1 = atoi(argv[1]);
-		x2 = atoi(argv[2]);
-		printf("%d\n", x1 * x2);
-	}
-	else
-	{
-		printf("invalid\n");
-		return (1);
+		if (s[a] == '-')
+			++b;
+
+		if (s[a] >= '0' && s[a] <= '9')
+		{
+			digit = s[a] - '0';
+			if (b % 2)
+				digit = -digit;
+			n = n * 10 + digit;
+			f = 1;
+			if (s[a + 1] < '0' || s[a + 1] > '9')
+				break;
+			f = 0;
+		}
+		a++;
 	}
 
-	return (0);
+	if (f == 0)
+		return (0);
+
+	return (n);
 }
+
