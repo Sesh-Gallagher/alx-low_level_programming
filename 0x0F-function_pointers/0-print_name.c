@@ -5,9 +5,7 @@
  * print_name - a function that prints a name
  * @name: String of array to be printed as name
  * @f: The pointer to function to bo used
- *
  * Return: nothing
- *
  */
 
 void print_name(char *name, void (*f)(char *))
@@ -17,5 +15,4 @@ void print_name(char *name, void (*f)(char *))
 
 
 	f(name);
-
 }
