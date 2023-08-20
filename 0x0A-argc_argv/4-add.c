@@ -6,7 +6,7 @@
 
 
 /**
- * check_num - check - string there are digit
+ * check_num - check - string if there are digits
  * @str: string array
  *
  * Return: Always 0 on Success

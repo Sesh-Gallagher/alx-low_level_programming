@@ -1,18 +1,19 @@
+#include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include "main.h"
 
 /**
  * main - prints the minimum number of coins to
+ * make change
  * @argc: argument count
  * @argv: argument vector
  *
- * Return: 0 on sucess, 1 (Error)
+ * Return: 0 on sucess, 1 if (Error)
  */
 
 int main(int argc, char *argv[])
 {
-	int num, i, result;
+	int num, a, result;
 	int coins[] = {25, 10, 5, 2, 1};
 
 	if (argc != 2)
@@ -30,12 +31,12 @@ int main(int argc, char *argv[])
 		return (0);
 	}
 
-	for (i = 0; i < 5 && num >= 0; i++)
+	for (a = 0; a < 5 && num >= 0; a++)
 	{
-		while (num >= coins[i])
+		while (num >= coins[a])
 		{
 			result++;
-			num -= coins[i];
+			num -= coins[a];
 		}
 	}
 
