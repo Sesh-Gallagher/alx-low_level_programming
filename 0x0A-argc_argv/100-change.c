@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
 
 	if (argc != 2)
 	{
-		printf("invalid\n");
+		printf("error\n");
 		return (1);
 	}
 
@@ -43,5 +43,3 @@ int main(int argc, char *argv[])
 	printf("%d\n", result);
 	return (0);
 }
-
-
