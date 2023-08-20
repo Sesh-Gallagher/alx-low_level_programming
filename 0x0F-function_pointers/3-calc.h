@@ -2,10 +2,11 @@
 #define CALC_H
 
 /**
- * Struct op - A structure to define an operation.
+ * struct op - A structure to define an operation.
  * @op: The Operator as a string
  * @f: The associated function
- * @Struct op: A structure that defines operations
+ *
+ * Discription struct op: A structure that defines operations
  * where op is the operator symbol
  *
  */
