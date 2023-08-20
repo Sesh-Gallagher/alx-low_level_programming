@@ -2,22 +2,25 @@
 #define CALC_H
 
 /**
- * Struct op - A struct op.
- * @op: The Operator
+ * Struct op - A structure to define an operation.
+ * @op: The Operator as a string
  * @f: The associated function
+ * @Struct op: A structure that defines operations
+ * where op is the operator symbol
  *
  */
-typdef struct op
+
+typedef struct op
 {
-	char *op
+	char *op;
 	int (*f)(int a, int b);
-}op_t;
+} op_t;
 
 int op_add(int a, int b);
 int op_sub(int a, int b);
 int op_mul(int a, int b);
 int op_div(int a, int b);
 int op_mod(int a, int b);
-int (*get_op_func(char*s))(int, int);
+int (*get_op_func(char *s))(int, int);
 
 #endif

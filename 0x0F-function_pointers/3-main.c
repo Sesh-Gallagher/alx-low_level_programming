@@ -35,7 +35,7 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 	    (*op == '%' && num2 == 0))
 	{
 		printf("Error\n");
-		exit(100);
+		exit(99);
 	}
 
 	printf("%d\n", get_op_func(op)(num1, num2));
