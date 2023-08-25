@@ -5,7 +5,7 @@
  *list_len - returns the number of elements in a list
  *@h: pointer to the list
  *
- * Return: number of elements in a linked list
+ * Return: number of elements 
  *
  */
 
