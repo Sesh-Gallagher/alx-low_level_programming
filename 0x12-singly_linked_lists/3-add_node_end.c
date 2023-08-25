@@ -4,8 +4,8 @@
 
 /**
  * add_node_end - func adds a new node at the end of a list_t **h
- * @str: String to add new node
  * @head: doubler pointer to list_t
+ * @str: String to add new node
  *
  * Return: the address of the new element, or NULL if it failed
  *
@@ -13,31 +13,31 @@
 
 list_t *add_node_end(list_t **head, const char *str)
 {
-	list_t *temp = *head;
-	list_t *new;
+	list_t *add = *head;
+	list_t *q;
 	unsigned int len = 0;
 
 	while (str[len])
 	len++;
 
-	new = malloc(sizeof(list_t));
-	if (!new)
+	q = malloc(sizeof(list_t));
+	if (!q)
 	return (NULL);
 
-	new->str = strdup(str);
-	new->len = len;
-	new->next = NULL;
+	q->str = strdup(str);
+	q->len = len;
+	q->next = NULL;
 
 	if (*head == NULL)
 	{
-	*head = new;
-	return (new);
+	*head = q;
+	return (q);
 	}
 
-	while (temp->next)
-	temp = temp->next;
+	while (add->next)
+	add = add->next;
 
-	temp->next = new;
+	add->next = q;
 
-	return (new);
+	return (q);
 }
