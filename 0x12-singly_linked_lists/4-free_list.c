@@ -3,20 +3,20 @@
 
 /**
  * free_list - frees a linked list
- * @head: pointer to list that has to be freed
+ * @head: pointer to list thats to be freed
  *
  * Return: free list
  */
 
 void free_list(list_t *head)
 {
-	list_t *temp;
+	list_t *new;
 
 	while (head)
 	{
-	temp = head->next;
+	new = head->next;
 	free(head->str);
 	free(head);
-	head = temp;
+	head = new;
 	}
 }
