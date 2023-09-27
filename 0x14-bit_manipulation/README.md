@@ -1,1 +1,1 @@
-Read me is about this folder and what the files inside contain
+This readme is about this folder and the files it contains
