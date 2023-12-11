@@ -13,67 +13,32 @@
 
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
-	unsigned int x = 0;
-	size_t lngth;
+	unsigned int counter = 0;
 
 	dlistint_t *tmp;
 
-	if (head == NULL || *head == NULL)
+	if (!*head)
 		return (-1);
-	lngth = dlistint_len(*head);
-	if (index >= lngth)
-		return (-1);
+
 	tmp = *head;
 	if (index == 0)
 	{
-		*head = tmp->next;
-		if (*head != NULL)
-			(*head)->prev = NULL;
+		*head = (*head)->next;
 		free(tmp);
+		if (*head)
+			(*head)->prev = NULL;
 		return (-1);
 	}
-	if (index == (lngth - 1))
+	while (counter < index)
 	{
-		while (tmp->next)
-		{
-			tmp = tmp->next;
-		}
-		free(tmp);
-	}
-	while (tmp)
-	{
-		if (x == index)
-		{
-			tmp->next->prev = tmp->prev;
-			tmp->prev->next = tmp->next;
-			free(tmp);
-			return (1);
-		}
+		counter++;
 		tmp = tmp->next;
-		x++;
+
+		if (!tmp)
+			return (-1);
 	}
-	return (-1);
+	tmp->prev->next = tmp->next;
+	tmp->next->prev = tmp->prev;
+	free(tmp);
+	return (1);
 }
-/**
- * dlistint_len - function that returns number of elemets in
- * dlistint_t list
- * @h: pointer to the head of the doubly linked list
- *
- * Return: 0 on success, -1 if failed.
- */
-
-size_t dlistint_len(const dlistint_t *h)
-{
-	int counter;
-
-	counter = 0;
-
-	while (h != NULL)
-	{
-		++counter;
-		h = h->next;
-	}
-	return (counter);
-}
-
-
