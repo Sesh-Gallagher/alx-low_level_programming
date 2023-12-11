@@ -13,32 +13,56 @@
 
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
-	unsigned int counter = 0;
+	unsigned int x = 0;
 
-	dlistint_t *tmp;
+	dlistint_t *tmp = *head;
 
-	if (!*head)
+	if (*head == NULL || dlistint_len(tmp) < index + 1)
 		return (-1);
 
-	tmp = *head;
-	if (index == 0)
+	if (!index)
 	{
-		*head = (*head)->next;
+		(*head) = tmp->next;
+		if (tmp->next)
+			tmp->next->prev = NULL;
+		tmp->next = NULL;
 		free(tmp);
-		if (*head)
-			(*head)->prev = NULL;
-		return (-1);
+		return (1);
 	}
-	while (counter < index)
+	while (x < index)
 	{
-		counter++;
 		tmp = tmp->next;
-
-		if (!tmp)
-			return (-1);
+		x++;
 	}
+
 	tmp->prev->next = tmp->next;
-	tmp->next->prev = tmp->prev;
+	if (tmp->next)
+		tmp->next->prev = tmp->prev;
 	free(tmp);
+
 	return (1);
 }
+
+/**
+ * dlistint_len - Function that returns  nr of nodes on list
+ * @h: pointer to the linked list
+ *
+ * Return: The number of node provided
+ */
+
+size_t dlistint_len(const dlistint_t *h)
+{
+	size_t new_nodes = 0;
+
+	if (!h)
+		return (0);
+
+	while (h)
+	{
+		new_nodes++;
+		h = h->next;
+	}
+
+	return (new_nodes);
+}
+
