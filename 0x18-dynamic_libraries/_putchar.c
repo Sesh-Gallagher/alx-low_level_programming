@@ -2,7 +2,7 @@
 
 /**
  * _Putchar - Writes the character c to a std output
- * Description - This program writes the char c to std output
+ * Description: This program writes the char c to std output
  *
  * @c: The char to print
  *
