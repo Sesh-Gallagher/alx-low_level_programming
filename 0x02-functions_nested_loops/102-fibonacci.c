@@ -3,31 +3,32 @@
 /**
  * main - prints the first 50 Fibonacci numbers
  *
- * Return: Always 0 (success)
+ * Return:  0
  */
 
 int main(void)
 {
-	long int z, x, c, next;
+	int num_count = 2;
+	long int a = 1, b = 2;
+	long int c;
 
-	z = 1;
-
-	x = 2;
-
-	for (z = 1; z <= 50; ++z)
+	printf("%lu, ", a);
+	while (num_count <= 50)
 	{
-		if (x != 20365011074)
+		if (num_count == 50)
 		{
-			printf("%ld\n", x);
-		} else
-		{
-			printf("%ld\n", x);
+			printf("%lu\n", b);
 		}
-		next = x + c;
-		x = c;
-		c = next;
+		else
+		{
+			printf("%lu, ", b);
+		}
+
+		c = b;
+		b += a;
+		a = c;
+		num_count++;
 	}
 
 	return (0);
-
 }
