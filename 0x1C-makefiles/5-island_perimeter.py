@@ -10,7 +10,7 @@ def island_perimeter(grid):
         grid (list): list of integers representing the island
 
     Returns:
-            Perimeter of the island """
+            Perimeter of the island."""
 
     size = 0
     edges = 0
